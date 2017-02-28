@@ -1,0 +1,337 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: #e6e6e6; }
+
+* {
+  box-sizing: border-box; }
+
+.blue img {
+  width: 100vw;
+  height: 31vh; }
+
+.pane {
+  background-color: #e6e6e6; }
+
+.navigator {
+  width: 100%;
+  height: 6vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  justify-content: space-around; }
+  .navigator .logo {
+    width: 13%;
+    height: 6vh; }
+    .navigator .logo img {
+      width: 80%;
+      height: 80%;
+      margin-top: 0.8vh;
+      margin-left: 1.5vw; }
+  .navigator .search-container {
+    line-height: 4.8vh;
+    font-size: 18px;
+    width: 75%;
+    margin-top: 0.5vh;
+    height: 4.8vh;
+    border: 1px solid black;
+    background-color: #9d9d9d;
+    border-radius: 15px;
+    font-weight: bold; }
+    .navigator .search-container .ion-android-search {
+      font-size: 25px;
+      color: #0f0f0f;
+      margin-right: 1vw;
+      float: right; }
+  .navigator .ion-android-menu {
+    color: white;
+    font-size: 27px;
+    margin-top: 0.9vh; }
+
+header {
+  width: 100%;
+  height: 30vh;
+  background-image: url("../image/header-bg.png");
+  background-size: 100% 30vh; }
+  header .title {
+    width: 100%;
+    height: 24vh;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 33vh; }
+
+.func {
+  width: 100%;
+  height: 33.25vh;
+  margin-top: 1vh;
+  padding: 2vw;
+  background-color: white; }
+  .func .row {
+    margin-left: 0.1vw;
+    width: 98%;
+    height: 15.75vh;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px; }
+    .func .row .icon {
+      width: 18%;
+      height: 100%;
+      margin-left: 3vw;
+      font-size: 52px; }
+      .func .row .icon span {
+        color: #000000;
+        text-align: center;
+        display: block;
+        width: 48px;
+        font-size: 10px; }
+
+.recommandContent {
+  width: 100%;
+  height: 67vh;
+  margin-top: 1vh;
+  padding: 3vw;
+  padding-top: 2vw;
+  background-color: white; }
+  .recommandContent .recom {
+    font-weight: bold;
+    font-size: 18px; }
+  .recommandContent .change {
+    float: right;
+    color: gray;
+    font-weight: bold; }
+  .recommandContent .icon {
+    float: right; }
+    .recommandContent .icon img {
+      width: 18px;
+      height: 18px; }
+  .recommandContent .content {
+    width: 100%;
+    height: 17vh;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 2vh;
+    padding: 2vh; }
+    .recommandContent .content .icon {
+      width: 20%;
+      height: 15.3vh;
+      float: left; }
+      .recommandContent .content .icon img {
+        width: 100%;
+        height: 15.3vh; }
+    .recommandContent .content .inner {
+      float: left;
+      margin-left: 2vw;
+      width: 75%;
+      height: 10.2vh; }
+      .recommandContent .content .inner span {
+        display: block;
+        margin-bottom: 0.5vh;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 18px;
+        color: #828282;
+        font-weight: bold; }
+  .recommandContent .check {
+    width: 100%;
+    height: 4vh;
+    color: gray;
+    font-size: 14px;
+    margin-top: 1vh;
+    text-align: center; }
+  .recommandContent .image-container {
+    width: 100%;
+    height: 20vh;
+    margin-top: 3vh; }
+    .recommandContent .image-container div {
+      float: left;
+      margin-left: 2vw;
+      width: 24vw;
+      color: black;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center; }
+      .recommandContent .image-container div img {
+        width: 24vw; }
+
+.guessLike {
+  width: 100%;
+  height: auto;
+  margin-top: 1vh;
+  padding: 3vw;
+  padding-top: 2vw;
+  background-color: white; }
+  .guessLike .recom {
+    font-weight: bold;
+    font-size: 18px; }
+  .guessLike .change {
+    float: right;
+    color: gray;
+    font-weight: bold; }
+  .guessLike .icon {
+    float: right; }
+    .guessLike .icon img {
+      width: 18px;
+      height: 18px; }
+  .guessLike .content {
+    width: 100%;
+    height: 17vh;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 2vh;
+    padding: 2vh; }
+    .guessLike .content .icon {
+      width: 20%;
+      height: 10.2vh;
+      float: left; }
+      .guessLike .content .icon img {
+        width: 100%;
+        height: 10.2vh; }
+    .guessLike .content .inner {
+      float: left;
+      margin-left: 2vw;
+      width: 75%;
+      height: 10.2vh; }
+      .guessLike .content .inner span {
+        display: block;
+        width: auto;
+        height: 2.55vh;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #828282;
+        font-weight: bold;
+        line-height: 2.55vh; }
+  .guessLike .check {
+    width: 100%;
+    height: 10vh;
+    color: gray;
+    font-size: 18px;
+    text-align: center; }
+  .guessLike .image-container {
+    width: 100%;
+    height: 25vh;
+    margin-top: 3vh; }
+    .guessLike .image-container div {
+      float: left;
+      margin-right: 4.2vw;
+      margin-left: 3vw;
+      width: 24vw;
+      color: black;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center; }
+      .guessLike .image-container div span {
+        display: inline-block;
+        width: 24vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .guessLike .image-container div img {
+        width: 24vw;
+        height: 18vh; }
+
+.hotRank {
+  width: 100%;
+  height: auto;
+  margin-top: 1vh;
+  padding: 3vw;
+  padding-top: 2vw;
+  background-color: white; }
+  .hotRank .recom {
+    font-weight: bold;
+    font-size: 18px; }
+  .hotRank .change {
+    float: right;
+    color: gray;
+    font-weight: bold; }
+  .hotRank .icon {
+    float: right; }
+    .hotRank .icon img {
+      width: 18px;
+      height: 18px; }
+  .hotRank .content {
+    width: 100%;
+    height: 17vh;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 2vh;
+    padding: 2vh; }
+    .hotRank .content .icon {
+      width: 20%;
+      height: 10.2vh;
+      float: left; }
+      .hotRank .content .icon img {
+        width: 100%;
+        height: 10.2vh; }
+    .hotRank .content .inner {
+      float: left;
+      margin-left: 2vw;
+      width: 75%;
+      height: 10.2vh; }
+      .hotRank .content .inner span {
+        display: block;
+        width: auto;
+        height: 2.55vh;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #828282;
+        font-weight: bold;
+        line-height: 2.55vh; }
+  .hotRank .check {
+    width: 100%;
+    height: 10vh;
+    color: gray;
+    font-size: 18px;
+    text-align: center; }
+  .hotRank .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 3vh; }
+    .hotRank .image-container div {
+      float: left;
+      margin-right: 4.2vw;
+      margin-left: 3vw;
+      width: 24vw;
+      color: black;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center; }
+      .hotRank .image-container div span {
+        display: inline-block;
+        width: 24vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .hotRank .image-container div img {
+        width: 24vw;
+        height: 18vh; }
+  .hotRank .pickUp {
+    margin-top: 5vh;
+    width: 100%;
+    height: auto;
+    text-align: end;
+    font-size: 14px;
+    font-weight: bold;
+    color: gray; }
+
+.ion-arrow-up-a {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  color: gray;
+  font-size: 30px; }
+
+/*# sourceMappingURL=home.css.map */

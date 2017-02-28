@@ -2,24 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="bin/ionic-v1.3.2/css/ionic.min.css">
+    <title>小Q学习</title>
+    <link href="lib/ionic-v1.3.2/css/ionic.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 </head>
 <body ng-app="systemModule" ng-controller="systemController">
+<div class="navigator">
+    <div class="logo"><img src="image/logo.png" alt=""></div>
+    <div class="search-container">请输入关键字 <div class="ion-android-search"></div></div>
+    <div class="ion-android-menu"></div>
+</div>
+<ion-content>
+        <header  on-drag-down="changeShow()" on-release="show()">
+            <ion-slide-box active-slide="myActiveSlide" auto-play="true" does-continue="true">
+                <ion-slide>
+                    <div class="box blue"><img src="image/header-bg.png" alt=""></div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box blue"><img src="image/header-bg2.png" alt=""></div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box blue"><img src="image/header-bg3.png" alt=""></div>
+                </ion-slide>
+            </ion-slide-box>
+        </header>
+        <div class="func" on-drag-down="changeShow()" on-release="show()">
+            <div class="row">
+                <div class="icon ion-chatboxes" style="color: #de4f01"><span>邮件</span></div>
+                <div class="icon ion-connection-bars" style="color: #df0059"><span>系统消息</span></div>
+                <div class="icon ion-chatbubbles" style="color: #eee800"><span>时间管理</span></div>
+                <div class="icon ion-person-stalker" style="color: #0075f7"><span>作业</span></div>
+                <div class="icon ion-transgender" style="color: #00f769"><span>题库</span></div>
+            </div>
+            <div class="row">
+                <div class="icon ion-image" style="color: #de01db"><span>附件</span></div>
+                <div class="icon ion-easel" style="color: #cd7310"><span>打卡记录</span></div>
+                <div class="icon ion-map" style="color: #b300f7"><span>聊天信息</span></div>
+                <div class="icon ion-cloud" style="color: #d00d0d"><span>发布文章</span></div>
+                <div class="icon ion-heart" style="color: #94f700"><span>日历</span></div>
+            </div>
+        </div>
+        <div class="recommandContent" >
+            <span class="recom">推荐内容</span>
+            <span class="change" ng-click="getBook()">换一换</span>
+            <div class="icon"><img src="image/recom-icon.png" alt=""></div>
+            <div class="content">
+                <div class="icon">
+                    <img src="{{book.img}}" alt="">
 
-<div>888888888</div>
-<div>搞事情</div>
-<div>hello</div>
-<div>33223</div>
-<div>fdsfds</div>
+                </div>
+                <div class="inner">
+                    <span style="font-size: 14px;color:black">{{book.name}}<span style="color:#f1b471;display: inline;font-size: 16px;float: right ">{{book.price}}</span> </span>
+                    <span>{{book.text1}}</span>
+                    <span style="border: 1px solid #828282;height: 18px;display: inline-block">11小时前更新</span>
+                    <span>{{book.text2}}</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <img src="{{book2.img}}" alt="">
 
-<script src="bin/ionic-v1.3.2/js/ionic.bundle.min.js"></script>
+                </div>
+                <div class="inner">
+                    <span style="font-size: 14px;color:black">{{book2.name}}<span style="color:#f1b471;display: inline;font-size: 16px;float: right ">{{book2.price}}</span> </span>
+                    <span>{{book2.text1}}</span>
+                    <span style="border: 1px solid #828282;height: 18px;display: inline-block">11小时前更新</span>
+                    <span>{{book2.text2}}</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <img src="{{book3.img}}" alt="">
+
+                </div>
+                <div class="inner">
+                    <span style="font-size: 14px;color:black">{{book3.name}}<span style="color:#f1b471;display: inline;font-size: 16px;float: right ">{{book3.price}}</span> </span>
+                    <span>{{book3.text1}}</span>
+                    <span style="border: 1px solid #828282;height: 18px;display: inline-block">11小时前更新</span>
+                    <span>{{book3.text2}}</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="recommandContent">
+            <span class="recom">推荐内容</span>
+            <span class="change" ng-click="getBook2()">换一换</span>
+            <div class="icon"><img src="image/recom-icon.png" alt=""></div>
+            <div class="content">
+                <div class="icon">
+                    <img src="{{book4.img}}" alt="">
+
+                </div>
+                <div class="inner">
+                    <span style="font-size: 14px;color:black">{{book4.name}}<span style="color:#f1b471;display: inline;font-size: 16px;float: right ">{{book4.price}}</span> </span>
+                    <span>{{book4.text1}}</span>
+                    <span style="border: 1px solid #828282;height: 18px;display: inline-block">11小时前更新</span>
+                    <span>{{book4.text2}}</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <img src="{{book5.img}}" alt="">
+
+                </div>
+                <div class="inner">
+                    <span style="font-size: 14px;color:black">{{book5.name}}<span style="color:#f1b471;display: inline;font-size: 16px;float: right ">{{book5.price}}</span> </span>
+                    <span>{{book5.text1}}</span>
+                    <span style="border: 1px solid #828282;height: 18px;display: inline-block">11小时前更新</span>
+                    <span>{{book5.text2}}</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <img src="{{book6.img}}" alt="">
+
+                </div>
+                <div class="inner">
+                    <span style="font-size: 14px;color:black">{{book6.name}}<span style="color:#f1b471;display: inline;font-size: 16px;float: right ">{{book6.price}}</span> </span>
+                    <span>{{book6.text1}}</span>
+                    <span style="border: 1px solid #828282;height: 18px;display: inline-block">11小时前更新</span>
+                    <span>{{book6.text2}}</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="guessLike">
+            <span class="recom">猜你喜欢</span>
+            <span class="change" ng-click="getBook3()">换一换</span>
+            <div class="icon"><img src="image/recom-icon.png" alt=""></div>
+            <div class="image-container">
+                <div><img src="{{book7.img}}" alt=""><span>{{book7.name}}</span></div>
+                <div><img src="{{book8.img}}" alt=""><span>{{book8.name}}</span></div>
+                <div><img src="{{book9.img}}" alt=""><span>{{book9.name}}</span></div>
+            </div>
+        </div>
+        <div class="hotRank">
+            <span class="recom">热门排行榜</span>
+            <span class="change" ng-click="fullRank();pickUpShowFn();">查看全部&gt</span>
+            <div class="image-container">
+                <div ng-repeat="r in rank"><img src="{{r.img}}" alt=""><span>{{r.name}}</span></div>
+            </div>
+            <div class="pickUp" ng-show="pickUpShow" ng-click="pickUp()">&lt收起</div>
+        </div>
+        <div class="full" style="width: 100vw;height: 8vh"></div>
+</ion-content>
+<div class="tabs tabs-icon-top">
+    <a class="tab-item" href="#">
+        <i class="icon ion-home"></i>
+        主页
+    </a>
+    <a class="tab-item" href="#">
+        <i class="icon ion-star"></i>
+        收藏
+    </a>
+    <a class="tab-item" href="#">
+        <i class="icon ion-gear-a"></i>
+        设置
+    </a>
+</div>
+<div class="ion-arrow-up-a" ng-click="scrollTop()">
+</div>
+
+
+
+<!--<script src="cordova.js"></script>-->
+<script src="lib/ionic-v1.3.2/js/ionic.bundle.js"></script>
 <script>
-    (function (angular) {
-        var m = angular.module("systemModule",[]);
-    })(window.angular);
+    (function (ag) {
+        ag.module("systemModule",['ionic']);
+    })(window.angular)
 </script>
-<script src="script/index.js"></script>
-
+<script src="script/client.js"></script>
 </body>
 </html>
